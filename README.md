@@ -2,10 +2,10 @@
 
 <a href="https://bear-official66.github.io/"><strong>Project Page</strong></a>
   |
-  <a href="#"><strong>arXiv</strong></a>
+  <a href="https://arxiv.org/abs/2510.08759"><strong>arXiv</strong></a>
   |
   <a href="#"><strong>Twitter</strong></a> 
-  | <a href="#"><strong>Huggingface</strong></a>
+  | <a href="https://huggingface.co/papers/2510.08759"><strong>Huggingface</strong></a>
 
  # 🚀 Todos
 
