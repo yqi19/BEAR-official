@@ -12,8 +12,8 @@
  - [ ] Release BEAR Benchmark with evaluation scripts
  - [ ] Release the official code of BEAR-Agent
 
-# 🍚 BibTex
-We would appreciate it if you find this work useful and consider citing it🥳!
+# 🥳 BibTex
+We would appreciate it if you find this work useful and consider citing it🎉!
 ```
 @article{qi2025bear,
   title={BEAR: Benchmarking and Enhancing Multimodal Language Models for Atomic Embodied Capabilities},
