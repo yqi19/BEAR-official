@@ -18,6 +18,31 @@
 
 Our official benchmark is released at [<a href="https://huggingface.co/datasets/yqi19/BEAR-benchmark/tree/main"><strong>Link</strong></a>]. The readme.md is organized for your agent to set up your evaluation scripts.
 
+### Dataset Structure
+
+The layout of the data structure:
+
+```python
+.
+├── README.md
+├── requirements.txt
+├── run_api_model.py      # inference with API models (gpt / gemini / claude)
+├── run_image_model.py    # inference with local VLMs (VLMEvalKit)
+├── run_custom_model.py   # inference with any local model, NO VLMEvalKit
+├── bear_models.py        # pluggable adapters (Cosmos, Qwen2.5-VL, Echo)
+├── eval.py               # grading -> final score
+├── util/                 # prompt templates, API wrappers, image grid
+│   ├── prompt_generation.py
+│   ├── gpt.py  gemini.py  claude.py
+│   └── concate_image.py
+└── <task folders>/       # data (*.json + media) + run.sh
+```
+
+### API and model preparations
+
+You need to have the access to OpenAI API models to calculate the final score. At each category, the output file of the test model's answer will be saved in a `json` file, and the judge model will calculate the final success rate. `run_custom_model.py` is designed for custom model evaluation.
+
+
 ## BibTex
 We would appreciate it if you find this work useful and consider citing it🎉!
 ```
