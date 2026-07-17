@@ -1,4 +1,4 @@
-# [BEAR: Benchmarking and Enhancing Multimodal Language Models with Atomic Embodied Capabilities](https://bear-official66.github.io/)
+# [ICML 2026 BEAR: Benchmarking and Enhancing Multimodal Language Models with Atomic Embodied Capabilities](https://bear-official66.github.io/)
 
 <a href="https://bear-official66.github.io/"><strong>Project Page</strong></a>
   |
@@ -14,7 +14,7 @@
  - [X] Release BEAR Benchmark with evaluation scripts
  - [ ] Release the official code of BEAR-Agent
 
-# 🥳 BibTex
+# BibTex
 We would appreciate it if you find this work useful and consider citing it🎉!
 ```
 @article{qi2025bear,
