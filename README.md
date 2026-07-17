@@ -14,6 +14,10 @@
  - [X] Release BEAR Benchmark with evaluation scripts
  - [ ] Release the official code of BEAR-Agent
 
+# 💻 Get access to benchmark data
+
+Our official benchmark is released at [<a href="https://huggingface.co/datasets/yqi19/BEAR-benchmark/tree/main"><strong>Link</strong></a>]. The readme.md is organized for your agent to set up your evaluation scripts.
+
 # BibTex
 We would appreciate it if you find this work useful and consider citing it🎉!
 ```
