@@ -9,16 +9,16 @@
   <a href="#"><strong>Twitter</strong></a> 
   | <a href="https://huggingface.co/papers/2510.08759"><strong>Huggingface</strong></a>
 
- # 🚀 Todos
+ ## 🚀 Todos
 
  - [X] Release BEAR Benchmark with evaluation scripts
  - [ ] Release the official code of BEAR-Agent
 
-# 💻 Get access to benchmark data
+## 💻 Get access to benchmark data
 
 Our official benchmark is released at [<a href="https://huggingface.co/datasets/yqi19/BEAR-benchmark/tree/main"><strong>Link</strong></a>]. The readme.md is organized for your agent to set up your evaluation scripts.
 
-# BibTex
+## BibTex
 We would appreciate it if you find this work useful and consider citing it🎉!
 ```
 @article{qi2025bear,
