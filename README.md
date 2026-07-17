@@ -1,4 +1,4 @@
-# ICML 2026 [BEAR: Benchmarking and Enhancing Multimodal Language Models with Atomic Embodied Capabilities](https://bear-official66.github.io/)
+# ⛱️ICML 2026 [BEAR: Benchmarking and Enhancing Multimodal Language Models with Atomic Embodied Capabilities](https://bear-official66.github.io/)
 
 <a href="https://bear-official66.github.io/"><strong>Project Page</strong></a>
   |
@@ -29,5 +29,5 @@ We would appreciate it if you find this work useful and consider citing it🎉!
 }
 ```
 
-# Contact
+## Contact
 Please contact Yu (qi.yu2@northeastern.edu) or Haibo (zhao.haib@northeastern.edu) if you would like discussions!
