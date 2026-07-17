@@ -1,4 +1,4 @@
-# [ICML 2026 BEAR: Benchmarking and Enhancing Multimodal Language Models with Atomic Embodied Capabilities](https://bear-official66.github.io/)
+# ICML 2026 [BEAR: Benchmarking and Enhancing Multimodal Language Models with Atomic Embodied Capabilities](https://bear-official66.github.io/)
 
 <a href="https://bear-official66.github.io/"><strong>Project Page</strong></a>
   |
