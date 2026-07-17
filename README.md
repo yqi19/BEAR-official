@@ -9,7 +9,7 @@
 
  # 🚀 Todos
 
- - [ ] Release BEAR Benchmark with evaluation scripts
+ - [-] Release BEAR Benchmark with evaluation scripts
  - [ ] Release the official code of BEAR-Agent
 
 # 🥳 BibTex
