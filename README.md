@@ -25,5 +25,5 @@ We would appreciate it if you find this work useful and consider citing it🎉!
 }
 ```
 
-# 🤔 Contact
+# Contact
 Please contact Yu (qi.yu2@northeastern.edu) or Haibo (zhao.haib@northeastern.edu) if you would like discussions!
