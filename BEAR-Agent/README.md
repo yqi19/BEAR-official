@@ -123,7 +123,7 @@ The agent reads one folder per question. [`agent/convert_bear_data.py`](agent/co
 
 | `--task-type` | Files per entry | `request.json` fields |
 | --- | --- | --- |
-| `pointing`, `bbox`, `trajectory` | `image.*`, and `mask.*` for pointing/bbox | `question`, `category`, `options`, `gt`, `images` (list), `mask` |
+| `pointing`, `bbox`, `trajectory`, `object trajectory` | `image.*`, and `mask.*` for pointing/bbox | `question`, `category`, `options`, `gt`, `images` (list), `mask` |
 | `object localization`, `next action prediction`, `task progress reasoning` | `video.mp4` | `question`, `category`, `options`, `gt`, `video` |
 | `relative direction`, `path planning` | `video.mp4`, `image.*` (current observation) | `question`, `category`, `options`, `gt`, `video`, `images` (one file name) |
 
@@ -148,9 +148,10 @@ for s in general_object semantic_part spatial_relationship; do
   convert pointing/${s}_pointing_official.json pointing/${s}_pointing pointing
   convert bbox/${s}_bbox_official.json         bbox/${s}_bbox         bbox
 done
-for s in gripper human_hand object; do
+for s in gripper human_hand; do
   convert trajectory/${s}_trajectory_official.json trajectory/${s}_trajectory trajectory
 done
+convert trajectory/object_trajectory_official.json           object_trajectory/object_trajectory       "object trajectory"
 convert spatial_reasoning/object_localization_official.json  object_localization/object_localization   "object localization"
 convert spatial_reasoning/relative_direction_official.json   relative_direction/relative_direction     "relative direction"
 convert spatial_reasoning/path_planning_official.json        path_planning/path_planning               "path planning"
@@ -167,7 +168,8 @@ Start the vision expert servers first, then run commands from the `BEAR-Agent/` 
 | `--task-type` | Prompt class ([`agent/prompt.py`](agent/prompt.py)) |
 | --- | --- |
 | `pointing`, `bbox` | `PerceptionPrompt` |
-| `trajectory` | `TrajPrompt` |
+| `trajectory` (gripper, human hand) | `TrajPrompt` |
+| `object trajectory` | `ObjTrajPrompt` |
 | `object localization` | `ObjectLocalizationPrompt` |
 | `relative direction` | `RelativeDirectionPrompt` |
 | `path planning`, `next action prediction`, `task progress reasoning` | `PlanningPrompt` |
@@ -187,6 +189,8 @@ python agent/running_agent_batch.py \
   --tasks-root tasks/bear/pointing --outputs-root outputs/bear/pointing \
   --task-type pointing
 ```
+
+`TrajPrompt` includes the tool descriptions, few-shot examples and a short knowledge-based memory. `ObjTrajPrompt` is a knowledge-based memory prompt for object manipulation trajectories, covering drawers, handles, lids, doors and buttons. Object trajectory questions use the same question template as `trajectory`.
 
 For video tasks, the agent samples 16 frames from `video.mp4`. For relative direction and path planning, the current observation image is appended as the last frame.
 

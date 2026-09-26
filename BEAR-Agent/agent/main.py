@@ -6,7 +6,7 @@ from builder.build_prompt_new import generate_question_prompt
 from agent import SketchpadUserAgent
 from multimodal_conversable_agent import MultimodalConversableAgent
 from prompt import (
-    MathPrompt, GeoPrompt, PerceptionPrompt, TrajPrompt,
+    MathPrompt, GeoPrompt, PerceptionPrompt, TrajPrompt, ObjTrajPrompt,
     ObjectLocalizationPrompt, RelativeDirectionPrompt, PlanningPrompt,
     python_codes_for_images_reading, MULTIMODAL_ASSISTANT_MESSAGE,
 )
@@ -18,7 +18,7 @@ import cv2
 import numpy as np
 
 SUPPORTED_TASK_TYPES = (
-    "pointing", "bbox", "trajectory", "object localization",
+    "pointing", "bbox", "trajectory", "object trajectory", "object localization",
     "relative direction", "path planning", "next action prediction",
     "task progress reasoning", "math", "geo",
 )
@@ -85,7 +85,7 @@ def _prepare_task(task_input, task_type, task_name):
     if task_type == "geo":
         return metadata, [], GeoPrompt()
 
-    image_task = task_type in {"pointing", "bbox", "trajectory"}
+    image_task = task_type in {"pointing", "bbox", "trajectory", "object trajectory"}
     question_prompt = generate_question_prompt(
         format="direct",
         category=metadata.get("category", "") if image_task else task_type,
@@ -97,6 +97,7 @@ def _prepare_task(task_input, task_type, task_name):
         "pointing": PerceptionPrompt,
         "bbox": PerceptionPrompt,
         "trajectory": TrajPrompt,
+        "object trajectory": ObjTrajPrompt,
         "object localization": ObjectLocalizationPrompt,
         "relative direction": RelativeDirectionPrompt,
         "path planning": PlanningPrompt,

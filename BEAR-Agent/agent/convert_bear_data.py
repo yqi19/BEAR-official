@@ -18,7 +18,7 @@ import os
 import random
 import shutil
 
-IMAGE_TASKS = {"pointing", "bbox", "trajectory"}
+IMAGE_TASKS = {"pointing", "bbox", "trajectory", "object trajectory"}
 VIDEO_TASKS = {"object localization", "relative direction", "path planning",
                "next action prediction", "task progress reasoning"}
 # video tasks whose last input is the current observation image
@@ -43,8 +43,9 @@ def convert_entry(entry, src_root, out_dir, task_type):
 
     request = {
         "question": entry["question"],
-        # image tasks select their question template by this field
-        "category": task_type,
+        # image tasks select their question template by this field; object trajectory
+        # shares the trajectory template and differs only in its system prompt
+        "category": "trajectory" if task_type == "object trajectory" else task_type,
         "options": options,
         "gt": entry["gt"],
     }
