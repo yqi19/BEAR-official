@@ -6,7 +6,7 @@
   |
   <a href="https://huggingface.co/datasets/yqi19/BEAR-benchmark"><strong>Data</strong></a>
 
-BEAR-Agent is the official agent from **BEAR: Benchmarking and Enhancing Multimodal Language Models with Atomic Embodied Capabilities**. It uses **GPT-5** as the backbone and solves BEAR tasks by writing Python code that calls vision tools:
+BEAR-Agent is the official agent from **BEAR: Dissecting Embodied Abilities in Multimodal Language Models through Skill-level Evaluation and Diagnosis**. It uses **GPT-5** as the backbone and solves BEAR tasks by writing Python code that calls vision tools:
 
 - GroundingDINO for detection
 - Semantic-SAM for segmentation
@@ -231,8 +231,8 @@ The agent framework builds on [Visual Sketchpad](https://github.com/Yushi-Hu/Vis
 
 ```bibtex
 @article{qi2025bear,
-  title={BEAR: Benchmarking and Enhancing Multimodal Language Models for Atomic Embodied Capabilities},
-  author={Qi, Yu and Zhao, Haibo and Guo, Ziyu and Ma, Siyuan and Chen, Ziyan and Han, Yaokun and Zhang, Renrui and Lin, Zitiantao and Xin, Shiji and Huang, Yijian and others},
+  title={BEAR: Dissecting Embodied Abilities in Multimodal Language Models through Skill-level Evaluation and Diagnosis},
+  author={Qi, Yu and Zhao, Haibo and Guo, Ziyu and Ma, Siyuan and Chen, Ziyan and Han, Yaokun and Zhang, Renrui and Lin, Zitiantao and Zhu, Yizhe and Xin, Shiji and Huang, Yijian and Hu, Boce and Cheng, Kai and Zhang, Jiayi and Wang, Peiheng and Liu, Jiazheng and Wang, Wenqing and Qin, Yiran and Huang, Haojie and Wong, Lawson L.S.},
   journal={arXiv preprint arXiv:2510.08759},
   year={2025}
 }

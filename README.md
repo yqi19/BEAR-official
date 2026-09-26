@@ -1,4 +1,4 @@
-# ⛱️ICML 2026 [BEAR: Benchmarking and Enhancing Multimodal Language Models with Atomic Embodied Capabilities](https://bear-official66.github.io/)
+# ⛱️ICML 2026 [BEAR: Dissecting Embodied Abilities in Multimodal Language Models through Skill-level Evaluation and Diagnosis](https://bear-official66.github.io/)
 
 <a href="https://bear-official66.github.io/"><strong>Project Page</strong></a>
   |
@@ -59,8 +59,8 @@ python agent/running_agent_batch.py --tasks-root tasks/bear/pointing --outputs-r
 We would appreciate it if you find this work useful and consider citing it🎉!
 ```
 @article{qi2025bear,
-  title={BEAR: Benchmarking and Enhancing Multimodal Language Models for Atomic Embodied Capabilities},
-  author={Qi, Yu and Zhao, Haibo and Guo, Ziyu and Ma, Siyuan and Chen, Ziyan and Han, Yaokun and Zhang, Renrui and Lin, Zitiantao and Xin, Shiji and Huang, Yijian and others},
+  title={BEAR: Dissecting Embodied Abilities in Multimodal Language Models through Skill-level Evaluation and Diagnosis},
+  author={Qi, Yu and Zhao, Haibo and Guo, Ziyu and Ma, Siyuan and Chen, Ziyan and Han, Yaokun and Zhang, Renrui and Lin, Zitiantao and Zhu, Yizhe and Xin, Shiji and Huang, Yijian and Hu, Boce and Cheng, Kai and Zhang, Jiayi and Wang, Peiheng and Liu, Jiazheng and Wang, Wenqing and Qin, Yiran and Huang, Haojie and Wong, Lawson L.S.},
   journal={arXiv preprint arXiv:2510.08759},
   year={2025}
 }
