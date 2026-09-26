@@ -1,0 +1,16 @@
+__pycache__/
+*.pyc
+.DS_Store
+tasks/
+outputs/
+agent/outputs/
+agent/eval_result/
+*.log
+*.log.*
+flagged/
+vision_experts/**/build/
+vision_experts/**/*.egg-info/
+vision_experts/**/weights/
+*.pth
+*.pt
+*.ckpt

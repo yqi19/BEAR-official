@@ -9,10 +9,10 @@
   <a href="#"><strong>Twitter</strong></a> 
   | <a href="https://huggingface.co/papers/2510.08759"><strong>Huggingface</strong></a>
 
- ## 🚀 Todos
+## 🚀 Todos
 
- - [X] Release BEAR Benchmark with evaluation scripts
- - [ ] Release the official code of BEAR-Agent
+- [X] Release BEAR Benchmark with evaluation scripts
+- [X] Release the official code of [BEAR-Agent](BEAR-Agent/)
 
 ## 💻 Get access to benchmark data
 
@@ -22,7 +22,7 @@ Our official benchmark is released at [<a href="https://huggingface.co/datasets/
 
 The layout of the data structure:
 
-```python
+```text
 .
 ├── README.md
 ├── requirements.txt
@@ -43,7 +43,19 @@ The layout of the data structure:
 You need to have the access to OpenAI API models to calculate the final score. At each category, the output file of the test model's answer will be saved in a `json` file, and the judge model will calculate the final success rate. `run_custom_model.py` is designed for custom model evaluation.
 
 
-## BibTex
+## 🤖 BEAR-Agent
+
+[BEAR-Agent](BEAR-Agent/) is our GPT-5 based agent. It solves BEAR tasks by calling vision tools, including detection, segmentation, depth estimation and trajectory extension. See [BEAR-Agent/README.md](BEAR-Agent/README.md) for installation, data conversion, running and evaluation.
+
+```bash
+cd BEAR-Agent
+# convert one BEAR subset into agent task folders, then run the agent on it
+python agent/convert_bear_data.py --official-json /path/to/BEAR-benchmark/pointing/general_object_pointing_official.json \
+    --out-dir tasks/bear/pointing/general_object_pointing --task-type pointing
+python agent/running_agent_batch.py --tasks-root tasks/bear/pointing --outputs-root outputs/bear/pointing --task-type pointing
+```
+
+## 📝 BibTeX
 We would appreciate it if you find this work useful and consider citing it🎉!
 ```
 @article{qi2025bear,
@@ -54,5 +66,5 @@ We would appreciate it if you find this work useful and consider citing it🎉!
 }
 ```
 
-## Contact
+## 📧 Contact
 Please contact Yu (qi.yu2@northeastern.edu) or Haibo (zhao.haib@northeastern.edu) if you would like discussions!
